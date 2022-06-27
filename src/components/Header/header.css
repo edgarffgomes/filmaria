@@ -10,7 +10,11 @@ header{
     text-decoration: none;
     font-size: 2em;
     color: #FFF;
+    transition: all 0.8s ease;
     cursor: pointer
+}
+.logo:hover{
+  font-size: 2.2em
 }
 .favoritos{
   cursor: pointer;
@@ -19,6 +23,7 @@ header{
   text-decoration: none;
   color: #000;
   border-radius: 4px;
+  transition: all 0.5s ease;
 }
 .favoritos:hover{
   background-color: #000;
