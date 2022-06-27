@@ -1,3 +1,6 @@
+.loading{
+  margin-top: 0.875rem;
+}
 .lista-filmes{
     max-width: 50rem;
     margin: 0.872rem auto;
