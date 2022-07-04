@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import api from "../../services/api"
 import "./filme.css";
 const Filme = ()=>{
 	const { id } = useParams();
+	const navigate = useNavigate()
 	const [filme, setFilme] = useState({});
 	const [loading, setLoading] = useState(true);
 	useEffect(()=>{
@@ -13,11 +14,14 @@ const Filme = ()=>{
 					api_key: '0872d21dc9c996bc89d07ecf09909025',
 					language: 'pt-br',
 				}})
-			.then((response)=>{
-				setFilme(response.data);
-				setLoading(false);
-			})
-			.catch(()=>{})
+				.then((response)=>{
+					setFilme(response.data);
+					setLoading(false);
+				})
+				.catch(()=>{
+					navigate("/", { replace: true });
+					return;
+				})
 			}
 
 			loadFilme();
@@ -25,7 +29,7 @@ const Filme = ()=>{
 			return ()=> {
 				console.log("Componente desmonatdo")
 			}
-	},[])
+	},[id, navigate])
 
 
 	if(loading){
@@ -53,12 +57,12 @@ const Filme = ()=>{
 					</button>
 
 					<button>
-						<a href="#">
+						<a target="_blank" rel="noreferrer" href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
 							Trailer
 						</a>
 					</button>
 				</div>
-				
+
 		</div>
 		)
 }
