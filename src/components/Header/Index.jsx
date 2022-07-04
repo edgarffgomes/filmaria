@@ -5,7 +5,7 @@ const Header = ()=>{
 
   return(
     <header>
-      <Link to="" className="logo">PrimeFlix</Link>
+      <Link to="" className="logo"><span className="prime">Prime</span><span className="flix">Flix</span></Link>
       <Link to="/favoritos" className="favoritos">Meus filmes</Link>
     </header>
   )

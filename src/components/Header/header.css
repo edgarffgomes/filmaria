@@ -9,12 +9,17 @@ header{
 .logo{
     text-decoration: none;
     font-size: 2em;
-    color: #FFF;
     transition: all 0.8s ease;
     cursor: pointer
 }
 .logo:hover{
   font-size: 2.2em
+}
+.prime{
+  color: #0894c4;
+}
+.flix{
+  color: #e50913;
 }
 .favoritos{
   cursor: pointer;
