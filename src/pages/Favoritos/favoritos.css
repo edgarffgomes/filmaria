@@ -1,5 +1,9 @@
 .meus-filmes{
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
 }
 .meus-filmes h1{
   margin-bottom: 0.875rem;
@@ -17,6 +21,11 @@
   margin-bottom: 0.875rem;
 }
 .meus-filmes div button{
-  color: #041020;
   margin-right: 0.875rem;
+}
+.meus-filmes div button:nth-child(1){
+  color: #10eb4a;
+}
+.meus-filmes div button:nth-child(2){
+  color: #e61205;
 }
