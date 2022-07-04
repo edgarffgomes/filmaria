@@ -4,6 +4,7 @@ import Home from "./pages/Home/Index.js";
 import Filme from "./pages/Filme/Index.js";
 import Header from "./components/Header/Index.jsx"
 import Erro from "./pages/Erro/index.js"
+import Favoritos from "./pages/Favoritos/Index.js"
 
 const MainRoutes = ()=>{
 	return(
@@ -12,6 +13,7 @@ const MainRoutes = ()=>{
 		<Routes>
 			<Route path="/" element={<Home />}/>
 			<Route path="/filme/:id" element={<Filme />}/>
+			<Route path="/favoritos" element={<Favoritos/>}/>
 
 
 			<Route path="*" element={<Erro />}/>
